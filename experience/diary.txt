@@ -1,0 +1,5 @@
+This challenge was a good learning experience overall. I did not have any prior experience with 
+Beautiful Soup nor web scraping.
+
+The main challenge for me involved wrapping my head around the data structure that would contain
+the JSON file.
