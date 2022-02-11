@@ -6,15 +6,12 @@ from bs4 import BeautifulSoup
 # output = list of JSON
 
 index = 0
-input = [requests.form.get("input")]
-
-print(input)
 
 # loop through all pages
 while index >= 0:
     
     #get the page
-    page = requests.get("https://apps.irs.gov/app/picklist/list/priorFormPublication.html?indexOfFirstRow={index}&sortColumn=sortOrder&value=&criteria=&resultsPerPage=200&isDescending=false")
+    page = [requests.get("https://apps.irs.gov/app/picklist/list/priorFormPublication.html?indexOfFirstRow={index}&sortColumn=sortOrder&value=&criteria=&resultsPerPage=200&isDescending=false")]
     
     # create an instance of the BeautifulSoup class
     soup = BeautifulSoup(page.content, 'html.parser')
@@ -25,10 +22,9 @@ while index >= 0:
     min_year = 0
     max_year = 0
 
-    # print the data
+    # print the data as JSON
 
     # increase the index by 200 (the max amount it can be increased)
     index += 200
-
 
 
